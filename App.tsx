@@ -1,8 +1,9 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Auth0Provider } from "react-native-auth0";
 import LoginButton from "./components/login-button";
 import LogoutButton from "./components/logout-button";
+import ProfileInformation from "./components/profile-information";
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
       clientId={process.env.EXPO_PUBLIC_AUTH0_CLIENT_ID || ""}
     >
       <View style={styles.container}>
-        <Text>Open up App.tsx to start working on your app!</Text>
+        <ProfileInformation />
         <LoginButton />
         <LogoutButton />
         <StatusBar style="auto" />
